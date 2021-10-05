@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <title>CITS5505 Project 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap core CSS, Javascript-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Custom CSS File(s)-->
+    <link rel="stylesheet" href="project1.css">
+    <!--'Space Grotesk' and 'Source Code Pro' Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <!--Scrollspy allows the navigation bar to stick to the top of the window-->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header>
+      <img class="header-image-cropped" height="200" width="100%" 
+           src="photos/castle.jpg" 
+           alt="Dilapidated Castle. Source: https://unsplash.com/photos/lhah6lFnims">
+      <div class="header-title">
+        <h1>History</h1>
+      </div>
+    </header>
+    <!--Navigation bar, attached to top of window via scrollspy-->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <a class="btn btn-default navbar-btn" href="profile.html">Profile</a>
+        <div class="btn-group">
+          <a href="history.html" type="button" class="btn btn-default navbar-btn active"> History </a>
+          <button type="button" class="btn btn-default navbar-btn dropdown-toggle active" data-toggle="dropdown">
+            <span class="caret"></span>
+          </button>
+          <ul class="nav navbar-nav navbar-btn dropdown-menu" role="menu">
+            <li><a href="#pre1990">Pre 1990s</a></li>
+            <li><a href="#1990">Early 1990s</a></li>
+            <li><a href="#1995">Late 1990s</a></li>
+            <li><a href="#2000">2000s Onwards</a></li>
+            <li><a href="#references">References</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-default navbar-btn" href="demonstration.html">Demonstration</a>
+      </div>
+    </nav>
+    <!--Main body of content-->
+    <main style="background-color:rgb(169, 192, 175);">
+      <div class="article container-fluid" id="1963">
+        <div class="col-sm-9 main-content">
+          <h2>Pre 1990s</h2>
+          <ul class="history-list">
+            <li style="list-style-type:none;"><em>1963</em></li>
+            <li>Ted Nelson Coins the terms ‘hypertext’ and ‘hypermedia’ <a href="#ref1">[1]</a></li>
+          </ul>
+            <blockquote class="blockquote">
+              <p class="mb-0">“Let me introduce the word "hypertext" to mean a body of written 
+                or pictorial material interconnected in such a complex way that it could not 
+                conveniently be presented or represented on paper. It may contain summaries, 
+                or maps of its contents and their interrelations; it may contain annotations, 
+                additions and footnotes from scholars who have examined it."</p>
+              <footer class="blockquote-footer">Ted Nelson,<cite title="Source Title">
+                Complex information processing: a file structure for the complex, the 
+                changing and the indeterminate</cite> <a href="#ref1">[1]</a></footer>
+            </blockquote>
+          <ul class="history-list">
+            <li style="list-style-type:none;"><em>1980</em></li>
+            <li>Tim Berners-Lee develops ENQUIRE (Hypertext database program; 
+              text displayed on a screen with embedded hyperlinks to other documents) 
+              <a href="#ref2">[2]</a></li>
+              <li style="list-style-type:none;"><em>1983</em></li>
+            <li>Domain Name Service (DNS) is first invented, allowing for 
+              translation between IP addresses and domain names, vastly simplifying to 
+              process of connecting to other servers, if only for not needing to remember 
+              the IP Address itself. 
+              <a href="#ref3">[3]</a></li>
+              <li style="list-style-type:none;"><em>1986</em></li>
+            <li> DNS becomes standardized for the web 
+              <a href="#ref3">[3]</a></li>
+              <li style="list-style-type:none;"><em>1989</em></li>
+            <li>Tim Berners-Lee proposes the world wide web, utilizing HyperText 
+              Transfer Protocol (HTTP) to send and receive HTML files, interpretable by any browser.
+              <a href="#ref2">[2]</a> <a href="#ref4">[4]</a></li>
+          </ul>
+        </div>
+        <!--Images attached to pre 1990s-->
+        <div class="col-sm-3 main-content">
+          <div class="dev-thumbnail image-shadow">
+            <a href="https://en.wikipedia.org/wiki/Ted_Nelson">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ted_Nelson_cropped.jpg/1024px-Ted_Nelson_cropped.jpg" 
+                   alt="Ted Nelson">
+            </a>
+            <label class="dev-thumb-label">Ted Nelson</label>
+          </div>
+          <div class="dev-thumbnail image-shadow">
+            <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg"
+                   alt="Tim Berners-Lee">
+              </a>
+              <label class="dev-thumb-label">Tim Barners-Lee</label>
+            </div>
+        </div>
+      </div>
+      <div class="article container-fluid" id="1990">
+        <div class="col-sm-9 main-content">
+          <h2>Early 1990s</h2>
+          <ul class="history-list">
+            <li style="list-style-type:none;"><em>1990</em></li>
+            <li>Tim Berners-Lee develops the browser “WorldWideWeb” for the NeXT 
+              computer system 
+              <a href="#ref5">[5]</a></li>      
+              <li style="list-style-type:none;"><em>1991</em></li>
+            <li>Tim Berners-Lee invents HyperText Markup Language (HTML), based on 
+              Standard Generalized Mark-up Language (SGML) which was already an internationally 
+              recognised standard for mark-up text. HTML contains a collection of elements, which 
+              consist of tags and content, and provide the semantics for how said content should 
+              be displayed. Elements are of the form &lt;tag attribute=value&gt; Content &lt;/tag&gt;
+              Whilst HTML would begin with many of the standard tags included in SGML 
+              (such as paragraph tags &lt;p&gt;, heading tags &lt;h1&gt; through &lt;h6&gt;, lists - 
+              both ordered &lt;ol&gt; and unordered &lt;ul&gt; - containing list items &lt;li&gt;) 
+              it would also include hypertext links with an HREF attribute allowing for text to act 
+              as buttons, loading further resources when selected. 
+              <a href="#ref7">[7]</a>
+              </li>
+              <li style="list-style-type:none;"><em>1993</em></li>
+            <li>Dave Raggett drafts HTML+ 
+              <a href="#ref7">[7]</a></li>
+            <li>National Center for Supercomputing Applications (NCSA) Mosaic releases, 
+              leading to an explosion of popularity in browsers for inclusion of images and text on 
+              the same page. Brought web browsers to the non-technical user. 
+              <a href="#ref7">[7]</a> <a href="#ref8">[8]</a></li>
+              <li style="list-style-type:none;"><em>1994</em></li>
+            <li>World Wide Web Consortium (W3C) is founded by Tim Berners-Lee. 
+              <a href="#ref2">[2]</a>
+            </ul>
+              <blockquote class="blockquote">
+                “...a Web standards organization… develops interoperable technologies (specifications, 
+                guidelines, software, and tools) to lead the Web to its full potential.”
+              </blockquote>
+            <ul class="history-list">
+            <li>Tim Berners-Lee and several colleagues write an article titled 
+              “The World-Wide Web” which outlined the necessary technologies and standardized 
+              specifications to implement the world wide web. 
+              <a href="#ref9">[9]</a></li>
+            <li>Marc Andreessen founds Netscape and releases Netscape Navigator 
+              <a href="#ref8">[8]</a></li>
+            <li>HTML working group is founded by the Internet Engineering Task Force 
+              (IETF) to help standardize HTML. 
+              <a href="#ref7">[7]</a></li>
+            <li>The HTML Working Group defines HTML 2.0 
+              <a href="#ref7">[7]</a></li>
+          </ul>
+        </div>
+        <!--Images attached to Early 1990s section-->
+        <div class="col-sm-3 main-content">
+          <div class="dev-thumbnail image-shadow">
+            <a href="https://en.wikipedia.org/wiki/Dave_Raggett">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Dave_Raggett_cropped.jpg"
+                  alt="Dave Raggett">
+            </a>
+            <label class="dev-thumb-label">Dave Raggett</label>
+          </div>
+          <div class="dev-thumbnail image-shadow">
+            <a href="https://en.wikipedia.org/wiki/Marc_Andreessen">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Marc_Andreessen-9.jpg/1280px-Marc_Andreessen-9.jpg"
+                  alt="Marc Andreessen">
+            </a>
+            <label class="dev-thumb-label">Marc Andreessen</label>
+          </div>
+        </div>
+      </div>
+      <div class="article container-fluid" id="1995">
+        <div class="col-sm-9 main-content">
+          <h2>Late 1990s</h2>
+          <ul class="history-list">
+            <li style="list-style-type:none;"><em>1995</em></li>
+            <li>HTML is further extended with new tags, with great discussion emerging 
+              on whether HTML should include styling such as text and background colour. 
+              <a href="#ref7">[7]</a></li>
+            <li>Microsoft releases Internet Explorer.
+            <a href="#ref7">[7]</a> <a href="#ref7">[8]</a></li>
+            <li>Dave Raggett publishes a draft of HTML 3 (the full realisation of HTML+) 
+              and is met with difficulty in having it standardized due to the large number of new 
+              inclusions. Various browser developers decide to implement features of HTML 3 as they 
+              saw fit, despite HTML 3 not being fully published. 
+              <a href="#ref7">[7]</a></li>
+            <li>Dave Raggett forms a small group of representatives from each 
+              browser company to help streamline the standardisation of HTML where the HTML 
+              working group is struggling.
+              <a href="#ref7">[7]</a></li>
+            <li>W3 begin discussing Cascading Style Sheets (CSS) as a solution for styling 
+              HTML pages, potentially with multiple, otherwise conflicting, documents. Prior to this, 
+              developers would implement their own style sheets with non-standardised formats.
+              <a href="#ref10">[10]</a></li>
+            <li>Brandan Eich, whilst working at Netscape as a programmer, releases “Mocha” 
+              (temporarily then referred to as “LiveScript”) which would later become known as JavaScript. 
+              JavaScript, named either for Netscape’s support of Java applets or possibly to piggyback on 
+              Java’s popularity, was designed as a more dynamic language allowing for interpretation of 
+              code at run-time, with no need for compilation. This made it perfect for interpreting and 
+              reacting to events in web applications.
+              <a href="#ref11">[11]</a></li>
+            <li>The Document Object Model (DOM) level ‘0’ is conceived from JavaScript’s 
+              interpretation of user events and the manipulation of HTML elements. DOM outlines the 
+              tree-like structure of HTML and XML documents whereby each element of the document is 
+              nested within other nodes (or objects). This allows for the document to be traversed 
+              semantically and manipulations made on the fly.
+              <a href="#ref12">[12]</a></li>
+            <li>The HTML working group is dissolved.
+              <a href="#ref7">[7]</a></li>
+              <li style="list-style-type:none;"><em>1996</em></li>
+            <li>W3 forms the HTML Editorial Review Board (ERB) to again, help with 
+              standardising HTML.
+              <a href="#ref7">[7]</a></li>
+            <li>Cascading Style Sheet (CSS) is released, providing a unified standard for 
+              structure style sheets, and allowing for ‘cascading’ styles to overwrite each other where 
+              necessary, allowing for more comprehensive styling.
+              <a href="#ref10">[10]</a></li>
+            <li>HTTP 1.0 is released.
+              <a href="#ref4">[4]</a></li>
+              <li style="list-style-type:none;"><em>1997</em></li>
+            <li>HTTP 1.1 is released, clearing up certain ambiguities in HTTP 1.0, which 
+              then goes on to be the standard for over 15 years (with revisions).
+              <a href="#ref4">[4]</a></li>
+            <li>Netscape allows the European Computer Manufacturers Association (ECMA) 
+              to handle language specification for JavaScript.
+              <a href="#ref4">[11]</a></li>
+            <li>HTML 3.2 is released as the cross-industry specification.
+              <a href="#ref7">[7]</a></li>
+              <li style="list-style-type:none;"><em>1998</em></li>
+            <li> Formerly referred to as “Cougar,” HTML 4.0 is released.
+              <a href="#ref7">[7]</a></li>
+            <li>DOM level “1” becomes a W3C standardised recommendation, despite numerous 
+              updates to the now termed “Legacy” DOM since its release.
+              <a href="#ref12">[12]</a></li>
+            <li>EXtensible Mark-up Language (XML) is released as a simplified version of SGML, 
+              utilising developer-defined tags to structure information. XML differs from HTML in that XML 
+              is designed to carry data, whilst HTML is designed to display it.
+              <a href="#ref13">[13]</a> <a href="#ref14">[14]</a></li>
+              <li style="list-style-type:none;"><em>1999</em></li>
+            <li>W3C releases their recommendation for HTML 4.01
+              <a href="#ref6">[6]</a></li>
+          </ul>
+          </div>
+          <!--Images attached to Late 1990s-->
+          <div class="col-sm-3 main-content">
+            <div class="dev-thumbnail image-shadow">
+              <a href="https://en.wikipedia.org/wiki/Brendan_Eich">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Brendan_Eich_Mozilla_Foundation_official_photo.jpg/1280px-Brendan_Eich_Mozilla_Foundation_official_photo.jpg"
+                    alt="Brendan Eich">
+              </a>
+              <label class="dev-thumb-label">Brendan Eich</label>
+            </div>
+          </div>
+        </div>
+      <div class="article container-fluid"  id="2000">
+        <div class="col-sm-12 main-content">
+          <h2>2000s Onwards</h2>
+          <ul class="history-list">
+            <li style="list-style-type:none;"><em>2000</em></li>
+            <li>W3C releases their recommendation for eXtensible HyperText Markup Language 
+              (XHTML); a hybrid of XML and HTML more strict than HTML by itself, relying on more 
+              comprehensive error handling and structure. Where HTML continues to display as best as 
+              it can in the presence of errors, XHTML requires does not.
+              <a href="#ref15">[15]</a></li>
+            <li>DOM Level “2” is released.
+              <a href="#ref12">[12]</a></li>
+              <li style="list-style-type:none;"><em>2004</em></li>
+            <li> Web Hypertext Application Technology Working Group is formed to develop HTML, 
+              DOM and Fetch standards for web development. 
+              <a href="#ref16">[16]</a> <a href="#ref17">[17]</a></li>
+            <li>DOM Level ”3” is released.
+              <a href="#ref12">[12]</a></li>
+              <li style="list-style-type:none;"><em>2005</em></li>
+            <li>Jesse James Garrett releases a paper titled “Ajax: A New Approach to Web 
+              Applications” that outlines the implementation of “Asynchronous JavaScript + XML” (AJAX). 
+              Ajax described as more of a methodology than a technology (or perhaps a collection of 
+              technologies) as it outlines the implementation of DOM, HTML, XHTML, XML, CSS and many 
+              others to create an asynchronous computing experience, similar to in desktop applications. 
+              This allows, among many other things, for developers to send requests to other servers 
+              without needing to wait for a response (ie, asynchronous).
+              <a href="#ref11">[11]</a> <a href="#ref18">[18]</a></li>
+              <li style="list-style-type:none;"><em>2008</em></li>
+            <li> WHATWG releases their first public draft for HTML 5.
+              <a href="#ref12">[19]</a></li>
+              <li style="list-style-type:none;"><em>2012</em></li>
+            <li>HTML 5 becomes Living Standard.
+              <a href="#ref17">[17]</a></li>
+              <li style="list-style-type:none;"><em>2014</em></li>
+            <li>W3C adds HTML 5 to their recommendation.
+              <a href="#ref17">[17]</a></li>
+              <li style="list-style-type:none;"><em>2015</em></li>
+            <li>HTTP/2 is released.
+              <a href="#ref4">[4]</a></li>
+            <li>DOM Level “4” is released, with further specification being handled by WHATWG.
+              <a href="#ref12">[12]</a> <a href="#ref16">[16]</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="article container-fluid" id="references">
+        <div class="col-sm-12 main-content">
+          <h2>References</h2>
+          <ol>
+            <li><cite id="ref1">T. H. Nelson, "Complex information processing: a file structure for the complex, the changing and the indeterminate," in Association for Computing Machinery, New York, 1965. </cite></li>
+            <li><cite id="ref2">T. Berners-Lee, "Biography," [Online]. Available: https://www.w3.org/People/Berners-Lee/Overview.html. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref3">M. Pramatarov, "DNS history. When and why was DNS created?," 27 12 2018. [Online]. Available: https://www.cloudns.net/blog/dns-history-creation-first/. [Accessed 07 04 2021].</cite></li>
+            <li><cite id="ref4">Mozilla, "Evolution of HTTP," [Online]. Available: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref5">T. Berners-Lee, "The WorldWideWeb browser," [Online]. Available: https://www.w3.org/People/Berners-Lee/WorldWideWeb.html. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref6">W3schools, "HTML History," [Online]. Available: https://www.w3schools.in/html-tutorial/history/. [Accessed 07 04 2021].</cite></li>
+            <li><cite id="ref7">A. W. Longman, "A History of HTML," 1998. [Online]. Available: https://www.w3.org/People/Raggett/book4/ch02.html. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref8">Mozilla, "The History of Web Browsers," [Online]. Available: https://www.mozilla.org/en-US/firefox/browsers/browser-history/. [Accessed 06 04 2021].</cite></li>
+            <li><cite id="ref9">T. Berners-Lee, R. Cailliau, A. Luotonen, H. F. Nielsen and A. Secret, "The World-Wide Web," Communications of the ACM, vol. 37, no. 8, pp. 76-82, 1994. </cite></li>
+            <li><cite id="ref10">B. Boss, "20 Years of CSS," 17 12 2016. [Online]. Available: https://www.w3.org/Style/CSS20/. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref11">T. DeGroat, "The History of JavaScript: Everything You Need to Know," 19 08 2019. [Online]. Available: https://www.springboard.com/blog/history-of-javascript/. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref12">S. Holzner, "The Document Object Models: A History," in Inside Javascript, New Riders Publishing, 2002. </cite></li>
+            <li><cite id="ref13">E. R. Harold and W. S. Means, "The Evolution of XML," XML in a Nutshell, vol. 3, 2004. </cite></li>
+            <li><cite id="ref14">w3schools, "Introduction to XML," [Online]. Available: https://www.w3schools.com/xml/xml_whatis.asp. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref15">G. Garza, "A History of XHTML: From the 1990s to Today," 05 03 2011. [Online]. Available: https://www.brighthub.com/internet/web-development/articles/109224/. [Accessed 06 04 2021].</cite></li>
+            <li><cite id="ref16">WHATWG, "WHATWG - FAQ," WHATWG, [Online]. Available: https://whatwg.org/faq. [Accessed 08 04 2021].</cite></li>
+            <li><cite id="ref17">N. Thoms, "A look back at HTML5," 17 02 2017. [Online]. Available: https://www.fasthosts.co.uk/blog/look-back-html5/. [Accessed 07 04 2021].</cite></li>
+            <li><cite id="ref18">J. J. Garrett, "Ajax: A New Approach to Web Applications," adaptive path, vol. 18, p. 02, 2005. </cite></li>
+            <li><cite id="ref19">I. Hickson and D. Hyatt, "HTML 5 A vocabulary and associated APIs for HTML and XHTML," 22 01 2008. [Online]. Available: https://www.w3.org/TR/2008/WD-html5-20080122/. [Accessed 08 04 2021].</cite></li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container" style="background-color:grey; color:white;">
+        <div style="float:left;">CITS5505 Project 1 04/2021</div>
+        <div style="float:right;">Author: Jason Clark 22601257</div>
+      </div>
+    </footer> 
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <title>CITS5505 Project 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap core CSS, Javascript-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Custom CSS File(s)-->
+    <link rel="stylesheet" href="project1.css">
+    <!--'Space Grotesk' and 'Source Code Pro' Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <!--Scrollspy allows the navigation bar to stick to the top of the window-->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header>
+      <img class="header-image-cropped" height="200" width="100%" 
+           src="photos/landscape.jpg"
+           alt="Landscape Photo. Source: https://unsplash.com/photos/rxBqpxP9kd4">
+      <div class="header-title">
+        <h1>Personal Portfolio</h1>
+      </div>
+    </header>
+    <!--Navigation bar, attached to top of window via scrollspy-->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="btn-group">
+          <a href="profile.html" type="button" class="btn btn-default navbar-btn active"> Profile </a>
+          <button type="button" class="btn btn-default navbar-btn dropdown-toggle active"
+                  data-toggle="dropdown">
+          <span class="caret"></span>
+          </button>
+          <ul class="nav navbar-nav navbar-btn dropdown-menu" role="menu">
+            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#workExp">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-default navbar-btn" href="history.html">History</a>
+        <a class="btn btn-default navbar-btn" href="demonstration.html">Demonstration</a>
+      </div>
+    </nav>
+    <!--Main body of content-->
+    <main style="background-color:rgb(169, 187, 192);">
+      <div class="article container-fluid">
+        <div class="col-sm-8 main-content" id="aboutMe">
+          <h2>About Me</h2>
+          <div style="margin: auto; padding: 0 30px;">
+            <!--Biography / CV-->
+            <p>
+              Hello and welcome to my personal portfolio!<br><br>
+              
+              To describe myself briefly, I am:
+            </p>
+            <ul>
+              <li>Easy-going and fun loving,</li>
+              <li>planning focussed, with a penchant for logical thought,</li>
+              <li>Detail oriented; sometimes to a fault,</li>
+              <li>Teamwork oriented with a soft-spot for problem solving.</li>
+            </ul>
+            <p>
+            I am currently studying a Masters in Information Technology with the aim
+            of entering the workforce in 2023. I am aiming for a team-focussed environment 
+            in software engineering, and though I am a driven individual I find that I 
+            benefit most from structure and accountability in the workplace.<br><br>
+            Studying at the University of Western Australia has provided me with 
+            a great number of challenges that have not only helped me further my 
+            learning, but also introduced me to endeavours I hadn't considered as 
+            potential job opportunities.
+            <br><br>
+            In my spare time I enjoy:
+            </p>
+            <ul>
+              <li>3D modelling in Blender or Autodesk,</li>
+              <li>Game Development using Unity, Unreal or Godot,</li>
+              <li>Painting Miniatures (especially Warhammer),</li>
+              <li>Dungeons & Dragons when time permits,</li>
+              <li>Reading,</li>
+              <li>Cooking.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4 main-content" style="text-align: center;">
+          <img src="photos/profile_photo.jpg" alt="Personal Photo" 
+               class="header-image-cropped image-shadow" height="500" width="80%"
+               style="margin-top: 50px;">
+        </div>
+      </div>
+      <div class="article container-fluid">
+        <div class="col-sm-6 main-content" id="workExp">
+          <!--Work Experience and Education Tables-->
+          <h2>Work Experience</h2>
+          <table class="exp-table">
+            <tr>
+              <td><em>2014 - Present</em></td>
+              <td>
+                <em>JB Hifi, Forrest Chase</em><br>
+                Part-Time (as of June 2018)<br>
+                Full Time (4 years)<br>
+                <ul>
+                  <li>Sales Representative</li>
+                  <li>Cashier</li>
+                  <li>Customer Service</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><em>2013 - 2015</em></td>
+              <td>
+                <em>Lucky 7, East Victoria Park</em><br>
+                Part-Time<br>
+                <ul>
+                  <li>Cashier</li>
+                  <li>Customer Service</li>
+                  <li>Kitceh Aid</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><em>2012 - 2013</em></td>
+              <td>
+                <em>Home Timber and Hardware, Donnybrook</em><br>
+                Full Time<br>
+                <ul>
+                  <li>Sales Representative</li>
+                  <li>Cashier</li>
+                  <li>Customer Service</li>
+                  <li>Paint Mixing</li>
+                  <li>Heavy Goods Remote Delivery</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+      </div>
+        <div class="row">
+          <div class="col-sm-6" id="education">
+            <h2>Education</h2>
+            <table class="exp-table">
+              <tr>
+                <td><em>2020 - Present</em></td>
+                <td>
+                  <em>Master of Information Technology</em><br>
+                  University of Western Australia
+                </td>
+              </tr>
+              <tr>
+                <td><em>2018 - 2020</em></td>
+                <td>
+                  <em>Bachelor of Science</em><br>
+                  Major in Computer Science, Mathematics<br>
+                  University of Western Australia
+                </td>
+              </tr>
+              <tr>
+                <td><em>2013 - 2015</em></td>
+                <td>
+                <em>Bachelor of Interactive Entertainment</em><br>
+                Major in games Design<br>
+                SAE-Qantm College (Perth)
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container" style="background-color:grey; color:white;">
+        <div style="float:left;">CITS5505 Project 1 04/2021</div>
+        <div style="float:right;">Author: Jason Clark 22601257</div>
+      </div>
+    </footer>    
+  </body>
+</html>

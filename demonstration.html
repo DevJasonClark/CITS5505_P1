@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <title>CITS5505 Project 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap core CSS, Javascript-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Custom CSS File(s)-->
+    <link rel="stylesheet" href="project1.css">
+    <!--'Space Grotesk' and 'Source Code Pro' Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <!--Demonstration Scripts from external JavaScript file-->
+    <script src="demonstration.js"></script>
+  </head>
+  <!--Scrollspy allows the navigation bar to stick to the top of the window-->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header>
+      <img class="header-image-cropped" height="200" width="100%" 
+           src="photos/code.jpg" 
+           alt='Generic "Code." Source: http://wallpaperswide.com/code_2-wallpapers.html'>
+      <div class="header-title">
+        <h1>Demonstration & Examples</h1>
+      </div>
+    </header>
+    <!--Navigation bar, attached to top of window via scrollspy-->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <a class="btn btn-default navbar-btn" href="profile.html">Profile</a>
+        <a class="btn btn-default navbar-btn" href="history.html">History</a>
+        <div class="btn-group">
+          <a href="demonstration.html" type="button" class="btn btn-default navbar-btn active"> Demonstration </a>
+          <button type="button" class="btn btn-default navbar-btn dropdown-toggle active" data-toggle="dropdown">
+            <span class="caret"></span>
+          </button>
+          <ul class="nav navbar-nav navbar-btn dropdown-menu" role="menu">
+            <li><a href="#HTML">HTML</a></li>
+            <li><a href="#style">Style</a></li>
+            <li><a href="#CSS">CSS</a></li>
+            <li><a href="#JS">JavaScript</a></li>
+            <li><a href="#DOM">DOM Manipulation</a></li>
+            <li><a href="#AJAX">AJAX</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Main body of content-->
+    <main style="background-color:rgb(192, 170, 169);">
+      <div class="article container-fluid" id="HTML">
+        <h2>HTML</h2>
+        <div class="example-block">
+          <p>
+            HyperText Markup Language (HTML) documents are of a tree-structure, comprised of nested 
+            elements, consisting of tags and content. Tags typically form pairs that encapsulate 
+            content, and may include attributes (surrounded with quaotations "") which further alter 
+            the display or interpretation of content (adding style, classes, hypertext links, sources, 
+            etc), and are nested between the &lt; and &gt; symbols. The second tag of any pair includes 
+            the / symbol to 'close' the tag.<br><br>
+            Comments are made (text not read by the browser) with &lt;!--Comment--&gt;, with multiple
+            lines simply requiring one closing --&gt; at the end<br><br>
+
+            HTML is designed for <b>content delivery</b>.
+        </p>
+          <pre><code>
+<span class="comment" style="float:left">&lt;!--Example Element:--&gt;</span>
+&lt;tag attribute="value"&gt; content &lt;/tag&gt;
+<span class="comment">&lt;!--"tag" denotes the type of element.</span>
+<span class="comment">    "attribute" denotes an element of the content to alter.</span>
+<span class="comment">    "value" is what the attribute should be changed to.</span>
+<span class="comment">    "content" denotes any text that should be displayed.</span>
+<span class="comment">    "/" denotes the closing tag, thus the end of the element.--&gt;</span>
+
+<span class="comment" style="float:left">&lt;!--Example Document Structure:--&gt;</span>
+&lt;!DOCTYPE html&gt; <span class="comment">&lt;!--!DOCTYPE instructs the browser on what version of HTML this document is.--&gt;</span>
+&lt;html lang="en-AU"&gt;
+<span class="comment">&lt;!--"html" denotes the document structure beginning</span>
+<span class="comment">    "lang" instructs the browser on the predominant language this document displays.--&gt;</span>
+  &lt;head&gt; <span class="comment">&lt;!--"Head" contains metadata on the document (charset, external resources, etc).--&gt;</span>
+    &lt;title&gt;CITS5505 Project 1&lt;/title&gt; <span class="comment">&lt;!--The main title for the page; not displayed.--&gt;</span>
+      ...
+  &lt;/head&gt; <span class="comment">&lt;!--Close the head element.--&gt;</span>
+  &lt;body&gt; <span class="comment">&lt;!--The "body" contains the majority of content for the page.--&gt;</span>
+    &lt;h1 style="font-weight:bold"&gt;This is a Heading&lt;/h1&gt;
+    ... <span class="comment">&lt;!--The above "h1" heading has been made bold.--&gt;</span>
+  &lt;/body&gt; <span class="comment">&lt;!--Close the body element.--&gt;</span>
+&lt;/html&gt; <span class="comment">&lt;!--Close the html document.--&gt;</span>
+          </code></pre>
+        </div><br>
+      </div>
+      <div class="article container-fluid" id="style">
+        <h2>Style</h2>
+        <div class="example-block">
+          <p>
+            Within HTML element tags, an attribute that can be changed is the contents "style."
+            This ranges from text and background colour to positioning and spacing around
+            other elements, with a semicolon ; separating individual style elements.
+          </p>
+          <pre><code>
+<span class="comment">&lt;!--Example:--&gt;</span>
+&lt;div style="color:darkblue; background-color:lightcoral; display:block; margin:auto; text-align:center; width:75%;"&gt;
+
+<span class="comment">&lt;!--Broken Down:--&gt;</span>
+&lt;div <span class="comment">&lt;!--We open with a "div" which is a division of the document (a section).--&gt;</span>
+  style=" <span class="comment">&lt;!--The attribute we are altering is its style.--&gt;</span>
+  color: darkblue; <span class="comment">&lt;!--Sets the text colour to dark blue.--&gt;</span>
+  background-color: lightcoral; <span class="comment">&lt;!--Sets the text colour to light coral.--&gt;</span>
+  display: block; <span class="comment">&lt;!--We set its display type to block, which adds line breaks before and after it.--&gt;</span>
+  margin: auto; <span class="comment">&lt;!--Set the margin to automatic, adding even space to the left and right of the element (effectively floating it in the middle).--&gt;</span>
+  text-align: center; <span class="comment">&lt;!--All text within the div aligns to the center.--&gt;</span>
+  width: 75%"&gt; <span class="comment">&lt;!--The divs width is set to 75% of the width of whatever it is inside.--&gt;</span>
+          </code></pre>
+          <div style="color:darkblue; background-color:lightcoral; display:block; margin:auto; text-align:center; width:75%;">
+          This is how content within the above div appears. The text is centered and dark blue, 
+          the background colour is light coral, and the block has a line break before and after it<br><br>
+          Notice I didn't say style had to look <i>good.</i>
+          </div>
+          <p>
+            The above div is long and difficult to read. We could potentially write it as per 
+            the example, with each new element of style being placed on a new line (extra whitespace 
+            between <i>attribute</i> elements has no real meaning), but our document would soon become 
+            much longer and more difficult to read.<br>
+            To remedy this we have two main options.<br><br>
+
+            1) We can place all of our style elements in the &lt;head&gt; of our file - the portion saved
+            for metadata - and refer to these styles by using <i>classes</i>, such as:
+          </p>
+          <pre><code>
+<span class="comment">/* Note that within the style tag, as well as in Cascading Style Sheets (see below),</span>
+<span class="comment">   comments are made with '/* comment */', with multiple line comments simply</span> 
+<span class="comment">   requiring a '*/' at the end, such as this comment. */</span>
+
+<span class="comment">/* Remember, we can either link to an external CSS document: */ </span>
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="project1.css"&gt;
+&lt;/head&gt;
+
+<span class="comment">/* Or we can define styles in &lt;head&gt;: */ </span>
+&lt;head&gt;
+<span class="comment">&lt;!--HTML comment--&gt;</span>
+  &lt;style&gt;
+<span class="comment">/* style comment */</span>
+    .example { <span class="comment">/* Custom classes begin with '.', and we use curly brackets to contain each style element. */</span>
+      color: darkblue;
+      background-color: lightcoral;
+      display: block;
+      margin: auto;
+      text-align: center;
+      width: 75%;
+    }
+    h1, h2 { <span class="comment">/* We can apply a style to more than one element, separating them with ',' */</span>
+      ...    <span class="comment">/* When specifying a style for a pre-existing tag-type we do not need '.' */</span>
+  &lt;/style&gt;
+&lt;/head&gt;
+  ...
+  &lt;div class="example"&gt; Content &lt;div&gt;
+          </code></pre>
+          <p>
+            2) We can place our styles in a separate document altogether, potentially applying them to 
+            <i>multiple</i> HTML documents without the need to rewrite the styles multiple times.<br><br>
+            These documents are known as Cascading Style Sheets (CSS), explained further below.
+          </p>
+        </div>
+      </div>
+      <div class="article container-fluid" id="CSS">
+        <h2>CSS</h2>
+        <div class="example-block">
+          <p>
+            Cascading Style Sheets (CSS) allow for the collection of styles in one or more 
+            documents, which can then be applied to numerous HTML documents concurrently in their &lt;head&gt;.<br>
+            CSS documents follow the same format as individual styles defined within the &lt;style&gt; element
+            in &lt;head&gt;, and contain no 'executable' code.<br><br>
+            CSS is designed for <b>content styling</b>.
+          </p>
+          <pre><code>
+* { <span class="comment">/* '*' applies to <i>all</i> elements in the document. */</span>
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: medium;
+}
+...
+.article {
+  margin: auto;
+  max-width: 1000px;
+  min-width: 300px;
+  padding: 10px 5px; <span class="comment">/* Some style attributes can have multiple arguments. */</span>
+}
+          </code></pre>
+          <p>
+            Multiple CSS documents can be applied to an HTML document, and just like with multiple individual styles 
+            they are applied in a top-down format. When applying multiple styles, 'later' defined styles and style 
+            sheets overwrite pre-existing defined attributes.<br><br>
+            Take our previous &lt;div class="example"&gt;
+          </p>
+          <div style="color:darkblue; background-color:lightcoral; display:block; margin:auto; text-align:center; width:75%;">
+            Thought you were done with me?
+          </div>
+          <p>
+            We can override the width of this element by defining the "width" attribute 'later' than
+            the initial class definition of "example"
+          </p>
+          <pre><code>
+  ...
+  .example { <span class="comment">/* Picture this declaration includes all the previous styling. */</span>
+    ...
+    width: 75%; <span class="comment">/* We have initially set the "example" class to a width of 70%. */</span>
+  }
+  ...
+&lt;div class="example" style="width:30%; border-radius:10pt;"&gt; Content &lt;div&gt;
+<span class="comment">&lt;!--We've now overridden the original width attribute, setting it to 30%--&gt;</span>
+          </code></pre>
+          <p>With the width attribute changed to 30% and border radius set to 10pt, our div now appears as: </p>
+          <div style="color:darkblue; background-color:lightcoral; display:block; margin:auto; text-align:center; width:30%; border-radius:10pt;">
+            Ever-so-slightly less ugly...
+          </div>
+          <p>Just as multiple styles can be applied to elements, so too can classes. Just remember that 
+            the <i>last</i> style definition overrides any already-defined style attributes, but continues
+            to inherit those not later defined (hence why we still have dark-blue text and a light coral background).
+          </p>
+          <pre><code>
+&lt;div class="example some-other-class a-third-class ..."&gt; ... &lt;/div&gt;
+<span class="comment">&lt;!--If 'some-other-class' and 'a-third-class' both also change the width attribute</span>
+<span class="comment">    then the final value is set by 'a-third-class'--&gt;</span>
+          </code></pre>
+        </div><br>
+      </div>
+      <div class="article container-fluid" id="JS">
+        <h2>JavaScript</h2>
+        <div class="example-block">
+          <p>
+            With HTML designed for content delivery and CSS designed for content styling, 
+            we have a strong basis for designing web applications that look nice and convey 
+            content in an easily-written and readable format. But so far we have described 
+            'static' performance. What if we want to add more to both style and functionality?
+            <br><br>
+            JavaScript is a scripting language, designed for the web, that allows us to run code
+            without the need for compilation. Execution is handled by the user's browser, and
+            allows developers to add more interactive functionality to a web page. Style can 
+            be changed by the press of a button; forms can determine whether a users input is valid 
+            before sending it off to the server; elements on the page can be animated and manipulated 
+            on the fly.
+            <br><br>
+            Just like with style, javascript can be implemented within a HTML document or in its own 
+            file, similarly linked in the &lt;head&gt; tag, within a &lt;script&gt; tag. Comments in 
+            JavaScript are made just like in CSS as '/* comment */', except for multiline comments 
+            where you can simply use '//' at the beginning of any comment to denote that the remaining 
+            line is such.
+          </p>
+          <pre><code>
+<span class="comment">/* As with CSS, we can link to an external JavaScript document: */</span>
+&lt;head&gt;
+  &lt;script src="demonstration.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+<span class="comment">/* Or we can define the script in &lt;head&gt; directly using &lt;script&gt;: */</span>
+&lt;head&gt;
+  &lt;script&gt;
+    function exampleFunction () {
+      alert("This function brings up an alert in the users window.");
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+
+<span class="comment">/* We can then call the script (or invoke it) by referencing it as functionName() */</span>
+&lt;button onclick="exampleFunction"&gt;Press Me&lt;/button&gt;
+          </code></pre>
+          <p> 
+            A function is first telegraphed by the word 'function', followed by its name, followed by 
+            parentheses, and then finally the body of the function contained within curly brackets '{}'. 
+            Functions are called by using their name and brackets 'myFunction()', with any necessary
+            parameters contained within the brackets. Functions can then change a value on an internal 
+            document (the HTML document, variables in the JavaScript file, an external file of data, etc),
+            return a value (based on user input or variables stored internally), or perhaps perform some 
+            function in the background, neither returning or changing anything.
+            <br><br>
+            Below we have a very simple script that reads the values of the X and Y boxes and then sends 
+            an alert to the window that provides the sum of the two numbers. Try changing the numbers.
+          </p>
+          <button onclick="add()">Add X + Y</button>
+          <label for="testX">X:</label><input type="number" value="1" style="width: 50px;" name="testX" id="testX">
+          <label for="testY">Y:</label><input type="number" value="2" style="width: 50px;" name="testY" id="testY">
+          <pre><code>
+function add () {
+  let x = parseInt(document.getElementById("testX").value);
+  let y = parseInt(document.getElementById("testY").value);
+  alert(x + y);
+}
+          </code></pre>
+          <p>
+            Forms are another powerful tool introduced by HTML but greatly empowered by JavaScript. 
+            One such example is using JavaScript to parse user input and determine its validity. Observe 
+            the below form:
+          </p>
+          <form style="margin: auto; padding: 20px; min-width: 300px; max-width: 400px; margin:auto">
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="pword">Password:</label>
+              <input type="password" class="form-control" id="pword" required>
+              <label for="pword" style="font-size: small; font-weight: lighter; text-align: center;">
+                Password must be between 6 and 10 characters,
+                contain only letters, numbers and underscores, 
+                and must begin with a letter.
+              </label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" required> I am <b>not</b> a robot</label>
+            </div>
+            <div style="text-align: center;">
+              <button type="reset" class="btn btn-default">Reset</button>
+              <button type="submit" onclick="verifyForm()" class="btn btn-default">Submit</button>
+            </div><br>
+          </form>
+          <p>
+            HTML and CSS alone (with the help of Bootstrap) allow us to set required fields, parse simple 
+            data such as names and emails or to ensure certain checkboxes are ticked, but what if we want 
+            to determine whether someone's password is secure enough (or at least to our standard format)?<br>
+            The above form invokes the "verifyForm" function when the submit button is pressed and all other 
+            fields are filled. <br>
+            The password is then verified to: 
+          </p>
+            <ul>
+              <li>Contain only letters a through z (uppercase allowed), numbers and underscores,</li>
+              <li>Have a length between 6 and 10,</li>
+              <li>Start with a letter.</li>
+            </ul>
+          <p>
+            If the user's input fits the criteria, the form is submitted. (well, not this form. An alert will appear, instead).
+          </p>
+          <pre><code>
+function verifyForm () {
+  let usrInput = document.getElementById("pword").value;
+  let allowed = /^[A-Za-z]\w{5,9}/;
+  <span class="comment">// The above 'allowed' variable is a "regular expression," which is a series of characters that denote a search pattern.</span>
+  <span class="comment">// ^[A-Za-z] implies that the first character (^) must be a letter, uppercase or lowercase ([A-Z] and [a-z]).</span>
+  <span class="comment">// \w{5,9} implies that there must then be between 5 and 9 ({5,9}) other characters of the 'word' family (\w)</span>
+  <span class="comment">// which includes letters, numbers and the underscore symbol (_).</span>
+  
+  if(usrInput.match(allowed))
+      alert(usrInput + " is valid!");
+  else
+      alert(usrInput + " is invalid! Try again.");
+}
+          </code></pre>
+          <p>
+            These are basic implementations of JavaScript but provide interesting ways to add simple functionality 
+            to a web page. JavaScript can even be made to 'listen' out for certain events. These events could be performed 
+            by the user (clicking a button or portion of the screen, typing, etc) or by a state change or loading of 
+            resources (the page is loaded for the first time or closed, an image source can't be found, etc).
+            <br><br>
+            By utilizing the Document Object Model (DOM), however, we can begin to add even more 
+            interactive and more interesting elements to our web application.
+          </p>
+        </div>
+      </div>
+      <div class="article container-fluid" id="DOM">
+        <h2>DOM Manipulation</h2>
+        <div class="example-block">
+          <p>
+            The Document Object Model shows that any HTML document, once loaded into the browser, is represented as 
+            a tree-structure of nodes (objects) that can be traversed and manipulated using simple JavaScript. HTML 
+            elements can be added, removed and manipulated freely - there are many possible ways in which to 
+            manipulate HTML using the Document Object Model (DOM).
+            <br><br>
+            This first example uses a button that, when clicked, runs a Javascript script 
+            to change the innerHTML attribute of the below paragraph</p>
+          <button onclick="domBasic()">Change Text</button>
+          <p id="domBasicOutput">Click the above button to execute the below script, 
+            changing this text.</p>
+          <pre><code>
+function domBasic() {
+  document.getElementById("domBasicOutput").innerHTML = "The text has been changed.";
+}
+          </code></pre>
+          <p>DOM manipulations can also be used to change the attributes of elements, 
+            such as style (color, weight, border, etc) or the source of media elements.
+          </p>
+          <button onclick="changeStyle()">Change Style</button>
+          <p id="styleChange">Press the button to adjust the colour and weight of this text.</p>
+          <pre><code>
+function changeStyle () {
+  let element = document.getElementById("styleChange");
+  element.style.color = "blue";
+  element.style.fontWeight = "bolder";
+}
+          </code></pre>
+          <p>
+            This button changes the source (src) attribute of the following image, cycling through an 
+            array of images.
+          </p>
+          <button onclick="changeImage()">Change Image</button>
+          <p>Press the button to cycle through the images stored in the "harold" array of URLs.</p>
+          <div style="display: block; margin: auto; text-align: center;">
+            <img src="photos/harold/harold_1.jpg" class="header-image-cropped"
+                alt="Harold, the man, the legend."
+                height="200" width="350" 
+                style="border: inset; border-color: rgb(192, 170, 169); border-radius: 20px;" 
+                id="haroldImg">
+          </div>
+          <pre><code>
+var harold = ["photos/harold/harold_1.jpg", 
+              "photos/harold/harold_2.jpg", 
+              "photos/harold/harold_3.jpg"];
+var currHarold = 0;
+
+function changeImage () {
+  currHarold = (currHarold + 1) % 3;
+  document.getElementById("haroldImg").src = harold[currHarold];
+}
+          </code></pre>
+          <button onclick="popSection()" id="populate">Populate Area</button>
+          <pre><code>
+function popSection () {
+  var addAfter = document.getElementById("populate");
+  addAfter.insertAdjacentHTML("afterend", 
+  '&lt;p&gt;\
+      JavaScript can even be used to insert \
+      more HTML where there previously wasn\'t any!\
+  &lt;/p&gt;\
+  &lt;div class="dev-thumbnail image-shadow"&gt;\
+  &lt;img src="photos/harold/harold_4.jpg"\ 
+          class="dev-thumbnail"\ 
+          alt="More Harold; you\'re welcome."&gt;\
+  &lt;/div&gt;\
+  &lt;p&gt;\
+    By the way, yes. Pressing the button will more Harold.\
+  &lt;/p&gt;');
+}
+<span class="comment">/* Note that '\' is necessary to split a long character sequence for ease of reading and to display certain characters as text. */</span>
+        </code></pre>
+          <br><br>
+        </div>
+      </div>
+      <div class="article container-fluid" id="AJAX">
+        <h2>AJAX</h2>
+        <div class="example-block">
+          <p>
+            There may situations in which you want JavaScript to do something, but can't rely on an immediate response.
+            JavaScript is "synchronou," meaning that it executes line after line, essentially in one direction. If a 
+            developer wishes to retrieve data from a server and display that information in their web page, they may 
+            not know if the request will succeed at all, let alone how long it will take. AJAX, which stands for Asynchronous 
+            JavaScript and XML allows for <i>asynchronous</i> operation of JavaScript; allowing a script to continue operating 
+            without needing to wait for a response.
+            <br><br>
+            The way this typically works, is that the response <i>itself</i> will invoke the remaining operation to be completed.
+            <br><br>
+            Below would have been a button that, when pressed, would provide a new Ron Swanson quote (I've been watching 
+            Parks and Rec lately with my partner). Unfortunately, due to some issues with family I didn't have as much time 
+            as I'd hoped. You can see my attempt in the JS code.
+          </p>
+          <button onclick="ajaxTemp()" id="getQuote">Get Quote</button>
+          <p id="quoteDestination">Fetching Quote...</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container" style="background-color:grey; color:white;">
+        <div style="float:left;">CITS5505 Project 1 04/2021</div>
+        <div style="float:right;">Author: Jason Clark 22601257</div>
+      </div>
+    </footer>    
+  </body>
+</html>
